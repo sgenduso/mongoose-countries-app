@@ -40,6 +40,12 @@ router.post('/edit/:id', function (req, res, next) {
   });
 });
 
+router.post('/delete/:id', function (req, res, next) {
+  var id = req.params.id;
+  db.Country.remove({_id: id}, function (err, country) {
+    res.redirect('/');
+  });
+});
 
 
 module.exports = router;

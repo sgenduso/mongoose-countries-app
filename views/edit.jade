@@ -5,7 +5,7 @@ block content
   p.link
     a(href='../') Return Home
   div
-    form(action='/edit' method='post')
+    form(action='/edit/' + id, method='post')
       label(for='name') Country: 
       input(type='text', id='name', name='name' value=country.name)
       label(for='flag') Flag: 
@@ -15,3 +15,6 @@ block content
       label(for='population') Population (millions): 
       input(type='number', id='population', name='population' value=country.population)
       input(type='submit' id='editCountry')
+  div
+    form(action='/delete/' + id, method='post')
+      input(type='submit', id='deleteCountry')
