@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  div.link
+    a(href='new') Add a Country
+  for country in countries
+    div.oneCountry
+      p
+      a(href='edit/'+country._id)=country.name
+      p
+        img(src=country.flag alt=country.name)
+      p Capital: 
+        =country.capital
+      p Population: 
+        =country.population

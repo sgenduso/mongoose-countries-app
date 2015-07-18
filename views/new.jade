@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  form(action='/new' method='post')
+    label(for='name') Country: 
+    input(type='text', id='name', name='name')
+    label(for='flag') Flag: 
+    input(type='text', id='flag', name='flag')
+    label(for='capital') Capital: 
+    input(type='text', id='capital', name='capital')
+    label(for='population') Population (millions): 
+    input(type='number', id='population', name='population')
+    input(type='submit' id='addCountry')
