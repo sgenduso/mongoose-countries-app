@@ -2,6 +2,8 @@ extends layout
 
 block content
   h1= title
+  p.link
+    a(href='../') Return Home
   form(action='/new' method='post')
     label(for='name') Country: 
     input(type='text', id='name', name='name')
@@ -11,4 +13,5 @@ block content
     input(type='text', id='capital', name='capital')
     label(for='population') Population (millions): 
     input(type='number', id='population', name='population')
-    input(type='submit' id='addCountry')
+    div
+      input(type='submit' id='addCountry' value='Add Country')

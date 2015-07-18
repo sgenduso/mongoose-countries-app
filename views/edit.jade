@@ -14,7 +14,8 @@ block content
       input(type='text', id='capital', name='capital' value=country.capital)
       label(for='population') Population (millions): 
       input(type='number', id='population', name='population' value=country.population)
-      input(type='submit' id='editCountry')
-  div
+    div
+      input(type='submit' id='editCountry' value='Update '+country.name)
+  div.delete
     form(action='/delete/' + id, method='post')
-      input(type='submit', id='deleteCountry')
+      input(type='submit', id='deleteCountry' value='Delete '+country.name)

@@ -9,6 +9,7 @@ a {
 
 img {
   width: 200px;
+  height: 130px;
 }
 
 .link {
@@ -20,5 +21,30 @@ img {
   border: solid black 2px;
   display: inline-block;
   width: 30%;
+  height: 275px;
+  margin: 5px;
   text-align: center;
+  vertical-align: top;
+}
+
+input {
+  margin-right: 10px;
+}
+
+#addCountry, #editCountry {
+  margin-top: 10px;
+  background-color: #008000;
+  color: white;
+  border: solid black 1px;
+  border-radius: 3px;
+  height: 25px;
+}
+
+#deleteCountry {
+  margin-top: 10px;
+  background-color: #a32924;
+  color: white;
+  border: solid black 1px;
+  border-radius: 3px;
+  height: 25px;
 }
