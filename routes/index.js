@@ -19,9 +19,25 @@ router.post('/new', function(req, res, next) {
   });
 });
 
+router.get('/countries/:id', function(req, res, next) {
+  var id = req.params.id;
+  db.Country.findOne({_id: id}, function (err, country) {
+  res.render('show', { title: country.name, country: country });
+});
+});
+
 router.get('/edit/:id', function(req, res, next) {
-  
-  res.render('edit', { title: 'Edit '+ country.name, id:req.params.id });
+  var id = req.params.id;
+  db.Country.findOne({_id: id}, function (err, country) {
+  res.render('edit', { title: 'Edit '+ country.name, id:id, country:country });
+});
+});
+
+router.post('/edit/:id', function (req, res, next) {
+  var id = req.params.id;
+  db.Country.update({_id: id}, req.body, function (err, country) {
+    res.redirect('/');
+  });
 });
 
 

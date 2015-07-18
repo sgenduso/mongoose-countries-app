@@ -7,7 +7,7 @@ block content
   for country in countries
     div.oneCountry
       p
-      a(href='edit/'+country._id)=country.name
+      a(href='countries/'+country._id)=country.name
       p
         img(src=country.flag alt=country.name)
       p Capital: 

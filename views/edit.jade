@@ -2,3 +2,16 @@ extends layout
 
 block content
   h1= title
+  p.link
+    a(href='../') Return Home
+  div
+    form(action='/edit' method='post')
+      label(for='name') Country: 
+      input(type='text', id='name', name='name' value=country.name)
+      label(for='flag') Flag: 
+      input(type='text', id='flag', name='flag' value=country.flag)
+      label(for='capital') Capital: 
+      input(type='text', id='capital', name='capital' value=country.capital)
+      label(for='population') Population (millions): 
+      input(type='number', id='population', name='population' value=country.population)
+      input(type='submit' id='editCountry')

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  div.thisCountry
+    p
+    a(href='../') Return Home 
+    p
+    a(href='../edit/' + country.id) Edit 
+      =country.name
+    p
+      img(src=country.flag alt=country.name)
+    p Capital: 
+      =country.capital
+    p Population: 
+      =country.population
